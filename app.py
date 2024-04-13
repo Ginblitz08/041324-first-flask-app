@@ -54,6 +54,19 @@ def about():
 def contact():
     return render_template("contacts.html")
 
+@app.route("/market-home", methods=["GET"])
+def market_home():
+    return render_template("market-home.html")
+
+@app.route("/market-about", methods=["GET"])
+def market_about():
+    return render_template("market-about.html")
+
+@app.route("/market-contact", methods=["GET"])
+def market_contact():
+    return render_template("market-contact.html")
+
+
 if __name__== "__main__":
     app.run()
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %} Marketplace{% endblock %}
+        </title>
+        <link rel="stylesheet" href="static/css/base-styles.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="logo">Marketplace</h1>
+
+            <ul class="header-links">
+                <li><a href="/market-home">Home</a></li>
+                <li><a href="/market-about">About</a></li>
+                <li><a href="/market-contact">Contact</a></li>
+            </ul>
+        </header>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
