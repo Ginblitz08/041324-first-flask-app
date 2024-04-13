@@ -5,13 +5,31 @@
 #     app.run()                             to here
 
 
-from flask import Flask, render_template
 
-app=Flask(__name__)
 
 #@app.route("/", methods=["GET"])                    #-decorator      http://127.0.0.1:5000 in browser
 #def hello_world():
 #   return "Hello, World!"
+
+
+# @app.route("/about", methods=["GET"])               #     http://127.0.0.1:5000/about in browser
+# def about():
+#     return "this app is created by Gino"
+
+
+# @app.route("/contact",methods=["GET"])              #     http://127.0.0.1:5000/contact in browser
+# def contact():
+#     return "this is the contact page"
+
+
+
+
+
+
+
+from flask import Flask, render_template
+
+app=Flask(__name__)
 
 @app.route("/", methods=["GET"])                    #-decorator      http://127.0.0.1:5000 in browser
 def hello_world():
@@ -27,19 +45,18 @@ def hello_world():
     </html>
     """
     return html
-    #return "Hello, World!"
-
-# @app.route("/about", methods=["GET"])               #     http://127.0.0.1:5000/about in browser
-# def about():
-#     return "this app is created by Gino"
 
 @app.route("/about", methods=["GET"])             
 def about():
     return render_template("about.html")
 
-@app.route("/contact",methods=["GET"])              #     http://127.0.0.1:5000/contact in browser
+@app.route("/contact",methods=["GET"])              
 def contact():
-    return "this is the contact page"
+    return render_template("contacts.html")
 
 if __name__== "__main__":
     app.run()
+
+
+
+
